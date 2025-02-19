@@ -31,7 +31,7 @@ class CourtController extends Controller
      */
     public function store(Request $request)
     {
-        return view('MCourt');
+        // return view('MCourt');
     }
 
     /**

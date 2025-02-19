@@ -16,7 +16,7 @@ class Court_TypeController extends Controller
    }
 
    public function store(){
-        return view('MCourt_Type');
+        // return view('MCourt_Type');
    }
 
 }

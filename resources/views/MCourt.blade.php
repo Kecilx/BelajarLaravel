@@ -1,6 +1,6 @@
 @extends('MasterProject')
-@section('title', 'MasterProject')
-@section('content-title', 'MasterProject')
+@section('title', 'Master Courts')
+@section('content-title', 'Master Courts')
 @section('content')
     <div class="col-md-8">
         <a href="" class="btn btn-success">Tambah Data</a>
@@ -16,6 +16,7 @@
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>Type {{ $court->court_type_id }}</td>
+                    {{-- <td>{{$court->type->name}}</td> --}}
                     <td>{{ $court->name }}</td>
                     <td>
                         <a class="btn btn-sm btn-warning" href="">Edit</a>
