@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Court_TypeController;
+use App\Http\Controllers\CourtController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,23 +23,28 @@ use Illuminate\Support\Facades\Route;
 //     return ('home');
 // });
 
-Route::get('/admin', function (){
-    return view('Master`Project');
-});
+// Route::get('/admin', function (){
+//     return view('Master`Project');
+// });
 
-Route::get('/MasterProject', function (){
-    return view('MProject');
-});
-// tugas //
+// Route::get('/MasterProject', function (){
+//     return view('MProject');
+// });
+// // tugas //
 
-Route::get('/Home', function (){
-    return view('Home');
-});
+// Route::get('/Home', function (){
+//     return view('Home');
+// });
 
-Route::get('/Master Project', function (){
-    return view('Master Project');
-});
+// Route::get('/Master Project', function (){
+//     return view('Master Project');
+// });
 
-Route::get('/Master Service', function (){
-    return view('Master Service');
-});
+// Route::get('/Master Service', function (){
+//     return view('Master Service');
+// });
+
+Route::get('/Court_Type', [Court_TypeController::class, 'index']);
+Route::post('/Court', [CourtController::class, 'store']);
+
+Route::resource('Court', CourtController::class);

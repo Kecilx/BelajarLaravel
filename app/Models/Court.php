@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Court extends Model
 {
     use HasFactory;
+
+    public function type(){
+        return $this->belongsTo(Court_Type::class, 'court_type_id');
+    }
 }

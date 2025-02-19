@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Court_Type extends Model
 {
     use HasFactory;
+
+    public function court(){
+        return $this->hasMany(Court::class);
+    }
 }
