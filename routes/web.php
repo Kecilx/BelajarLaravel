@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Court_TypeController;
 use App\Http\Controllers\CourtController;
+use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -45,6 +47,15 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/Court_Type', [Court_TypeController::class, 'index']);
+Route::post('/Court_Type', [Court_TypeController::class, 'store']);
+
+Route::get('/Court', [CourtController::class, 'index']);
 Route::post('/Court', [CourtController::class, 'store']);
+
+Route::get('/User', [UserController::class, 'index']);
+Route::post('/User', [UserController::class, 'store']);
+
+Route::get('/Transaction', [TransactionController::class, 'index']);
+Route::post('/Transaction', [TransactionController::class, 'store']);
 
 Route::resource('Court', CourtController::class);
